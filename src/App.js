@@ -22,7 +22,8 @@ class App extends Component {
   }
 
   handleChange = (e) => {
-    const {value, id} = e.target
+    const value = e.target.value
+    const id = e.target.id
     this.setState({
       info:{
         [id]: value,

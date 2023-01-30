@@ -1,20 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class display extends Component{
-    constructor() {
-        super()
+const display = (props) => {
+    const { data } = props;
 
-        this.state = {
 
-        }
-    }
-    render(){
-        return(
-            <div>
-
-            </div>
-        )
-    }
+    return(
+        <div>
+            <h1>Hi {data.info.name}</h1>
+            <p>display form running</p>
+        </div>
+    )
 }
 
 export default display
