@@ -7,7 +7,6 @@ class App extends Component {
     super();
 
     this.state={
-      info:{
         name:'',
         email:'',
         phone:'',
@@ -17,23 +16,18 @@ class App extends Component {
         companyName:'',
         companyPosition:'',
         companyDate:'',
-      }
     }
   }
 
   handleChange = (e) => {
-    const value = e.target.value
-    const id = e.target.id
     this.setState({
-      info:{
-        [id]: value,
-      }
+        [e.target.id]: e.target.value,
     })
   }
 
   render(){
     const {name, email, phone, schoolName, schoolTitle,
-      schoolDate, companyName, companyPosition, companyDate} = this.state.info;
+      schoolDate, companyName, companyPosition, companyDate} = this.state;
 
     return(
       <div className='CV-App'> 
